@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.*)$ $1.php
+    #RewriteRule ^([a-z]+)\/?$ $1.php [NC]
+    
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.*)$ $1.html
+    #RewriteRule ^([a-z]+)\/?$ $1.html [NC]
+    
+    # disable directory browsing
+    Options All -Indexes
+	
+	# error document
+	ErrorDocument 400	http://localhost/mstravel/
+	ErrorDocument 401	http://localhost/mstravel/
+	ErrorDocument 403	http://localhost/mstravel/
+	ErrorDocument 404	http://localhost/mstravel/
+	ErrorDocument 406	http://localhost/mstravel/
+	ErrorDocument 500	http://localhost/mstravel/
+</IfModule>

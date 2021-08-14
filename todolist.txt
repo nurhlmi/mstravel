@@ -1,0 +1,15 @@
+detail
+
+checkout
+
+done
+
+packages
+- search tour
+- filter
+
+gallery
+
+news
+
+about
